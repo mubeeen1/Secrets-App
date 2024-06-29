@@ -1,0 +1,48 @@
+<%- include('partials/header') %>
+
+<div class="container mt-5">
+  <h1>Login</h1>
+
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+
+          <!-- Makes POST request to /login route -->
+          <form action="/login" method="POST">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" name="username">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="password">
+            </div>
+            <button type="submit" class="btn btn-dark">Login</button>
+          </form>
+          <p class="redirect"><em>Don't have an account?  <a href="/register" class="redirect">Register </em></a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4 " >
+      <div class="card">
+        <div class="card-body">
+          <a class=" social-button" id="google-connect" href="/auth/google" role="button">
+            <!-- <i class="fab fa-google"></i> -->
+           <span> Sign In with Google </span>
+          </a>
+        </div>
+        <div class="card-body">
+          <a class=" social-button" id="facebook-connect" href="/auth/facebook" role="button">
+            <!-- <i class="fab fa-google"></i> -->
+           <span> Sign In with Facebook</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<%- include('partials/footer') %>
